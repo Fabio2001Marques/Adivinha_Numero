@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Adivinha_Numero</string>
+    <string name="numero">Número</string>
+    <string name="numero1_10">Número (Entre 1 e 10)</string>
+    <string name="tentativas">Tentativas:</string>
+    <string name="o_numero_maior_que_esse">o numero é maior que esse</string>
+    <string name="adivinhar">Adivinhar</string>
+</resources>
