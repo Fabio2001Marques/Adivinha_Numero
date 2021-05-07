@@ -23,7 +23,8 @@
             android:id="@+id/EditTextNumero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/numero1_10" />
+            android:hint="@string/numero1_10"
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView

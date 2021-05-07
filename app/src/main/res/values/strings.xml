@@ -5,4 +5,8 @@
     <string name="tentativas">Tentativas:</string>
     <string name="o_numero_maior_que_esse">o numero é maior que esse</string>
     <string name="adivinhar">Adivinhar</string>
+    <string name="jogo">\"Jogos: \"</string>
+    <string name="tentativa">\"Tentativas: \"</string>
+    <string name="numero_invalido">Introduza um número (entre 1 e 10)</string>
+    <string name="numero_entre_1_10">O número deve estar entre 1 e 10</string>
 </resources>

@@ -3,7 +3,9 @@ package pt.ipg.adivinha_numero
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -29,13 +31,25 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun atualizaJogoTentativas() {
-        findViewById<TextView>(R.id.textViewJogos).text = "Jogos: "+ jogo
-        findViewById<TextView>(R.id.textViewTentativas).text = "Tentativas: "+ tentativas
+        findViewById<TextView>(R.id.textViewJogos).text = getString(R.string.jogo)+ jogo
+        findViewById<TextView>(R.id.textViewTentativas).text = getString(R.string.tentativa)+ tentativas
     }
 
     fun adivinha(view: View) {
 
+        val editTextNumero = findViewById<EditText>(R.id.EditTextNumero)
 
+        val numero = editTextNumero.text.toString().toIntOrNull()
+
+        when (numero){
+            in 1..10 -> verificaAcertou()
+            null -> editTextNumero.error = getString(R.string.numero_invalido)
+            else -> editTextNumero.error = getString(R.string.numero_entre_1_10)
+        }
+
+    }
+
+    private fun verificaAcertou() {
 
     }
 }
