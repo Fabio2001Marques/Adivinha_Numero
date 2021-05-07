@@ -20,46 +20,36 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditTextNumero"
+            android:id="@+id/EditTextNumero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/numero1_10" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/textViewTentativas"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
-        android:text="@string/tentativas"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="@+id/textViewFeedBack"
+        app:layout_constraintStart_toStartOf="@+id/textViewFeedBack"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFeedBack"
+        tools:text="Tentativas: 0" />
+
+    <TextView
+        android:id="@+id/textViewFeedBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewTentativas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginLeft="72dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        tools:text="1" />
-
-    <TextView
-        android:id="@+id/textViewMensagem"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginBottom="24dp"
-        android:text="@string/o_numero_maior_que_esse"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.2"
+        tools:text="@string/o_numero_maior_que_esse" />
 
     <Button
         android:id="@+id/button"
@@ -70,5 +60,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <TextView
+        android:id="@+id/textViewJogos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTentativas"
+        app:layout_constraintStart_toStartOf="@+id/textViewTentativas"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTentativas"
+        tools:text="Jogos: 0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
